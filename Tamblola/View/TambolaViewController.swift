@@ -24,7 +24,7 @@ final class TambolaViewController: UIViewController {
     private lazy var startButton: UIButton = {
         let button = UIButton()
         button.setTitle("Start Tambola", for: .normal)
-        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .extraLargeTitle)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 35)
         button.addTarget(self, action: #selector(gameStartButtonTapped(_:)), for: .touchUpInside)
         button.backgroundColor = .systemPink
         button.translatesAutoresizingMaskIntoConstraints = false
