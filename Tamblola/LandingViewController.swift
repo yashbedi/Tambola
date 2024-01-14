@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LandingViewController.swift
 //  Tamblola
 //
 //  Created by Yash Bedi on 14/01/24.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class LandingViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
