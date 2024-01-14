@@ -50,7 +50,6 @@ private extension TambolaNumberCell {
     }
     
     func setup(){
-//        contentView.backgroundColor = .green
     }
     
     func setHierarchy(){

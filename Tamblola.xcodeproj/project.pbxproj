@@ -16,8 +16,6 @@
 		4B7278A72B53170C006E1400 /* TamblolaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278A62B53170C006E1400 /* TamblolaUITestsLaunchTests.swift */; };
 		4B7278B42B531B63006E1400 /* TambolaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278B32B531B63006E1400 /* TambolaPresenter.swift */; };
 		4B7278B62B531CE5006E1400 /* TambolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278B52B531CE5006E1400 /* TambolaViewController.swift */; };
-		4B7278B82B531D28006E1400 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278B72B531D28006E1400 /* LandingViewController.swift */; };
-		4B7278BA2B53337B006E1400 /* TambolaCalledOutNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278B92B53337B006E1400 /* TambolaCalledOutNumbersView.swift */; };
 		4B7278BC2B53339D006E1400 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278BB2B53339D006E1400 /* Constants.swift */; };
 		4B7278BE2B53353B006E1400 /* TambolaNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278BD2B53353B006E1400 /* TambolaNumberCell.swift */; };
 		4B7278C02B543937006E1400 /* TambolaGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7278BF2B543937006E1400 /* TambolaGridViewController.swift */; };
@@ -54,8 +52,6 @@
 		4B7278A62B53170C006E1400 /* TamblolaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamblolaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B7278B32B531B63006E1400 /* TambolaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambolaPresenter.swift; sourceTree = "<group>"; };
 		4B7278B52B531CE5006E1400 /* TambolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambolaViewController.swift; sourceTree = "<group>"; };
-		4B7278B72B531D28006E1400 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
-		4B7278B92B53337B006E1400 /* TambolaCalledOutNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambolaCalledOutNumbersView.swift; sourceTree = "<group>"; };
 		4B7278BB2B53339D006E1400 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4B7278BD2B53353B006E1400 /* TambolaNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambolaNumberCell.swift; sourceTree = "<group>"; };
 		4B7278BF2B543937006E1400 /* TambolaGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TambolaGridViewController.swift; sourceTree = "<group>"; };
@@ -109,18 +105,14 @@
 		4B7278822B53170B006E1400 /* Tamblola */ = {
 			isa = PBXGroup;
 			children = (
+				4B8FD94B2B545A5F00000FF8 /* View */,
+				4B8FD94A2B545A5300000FF8 /* Presenter */,
 				4B7278832B53170B006E1400 /* AppDelegate.swift */,
 				4B7278852B53170B006E1400 /* SceneDelegate.swift */,
-				4B7278B52B531CE5006E1400 /* TambolaViewController.swift */,
-				4B7278BF2B543937006E1400 /* TambolaGridViewController.swift */,
-				4B7278B92B53337B006E1400 /* TambolaCalledOutNumbersView.swift */,
-				4B7278BD2B53353B006E1400 /* TambolaNumberCell.swift */,
 				4B7278BB2B53339D006E1400 /* Constants.swift */,
-				4B7278B32B531B63006E1400 /* TambolaPresenter.swift */,
 				4B72788C2B53170C006E1400 /* Assets.xcassets */,
 				4B72788E2B53170C006E1400 /* LaunchScreen.storyboard */,
 				4B7278912B53170C006E1400 /* Info.plist */,
-				4B7278B72B531D28006E1400 /* LandingViewController.swift */,
 			);
 			path = Tamblola;
 			sourceTree = "<group>";
@@ -140,6 +132,24 @@
 				4B7278A62B53170C006E1400 /* TamblolaUITestsLaunchTests.swift */,
 			);
 			path = TamblolaUITests;
+			sourceTree = "<group>";
+		};
+		4B8FD94A2B545A5300000FF8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4B7278B32B531B63006E1400 /* TambolaPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4B8FD94B2B545A5F00000FF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B7278B52B531CE5006E1400 /* TambolaViewController.swift */,
+				4B7278BF2B543937006E1400 /* TambolaGridViewController.swift */,
+				4B7278BD2B53353B006E1400 /* TambolaNumberCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,13 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7278BA2B53337B006E1400 /* TambolaCalledOutNumbersView.swift in Sources */,
 				4B7278B42B531B63006E1400 /* TambolaPresenter.swift in Sources */,
 				4B7278842B53170B006E1400 /* AppDelegate.swift in Sources */,
 				4B7278BE2B53353B006E1400 /* TambolaNumberCell.swift in Sources */,
 				4B7278B62B531CE5006E1400 /* TambolaViewController.swift in Sources */,
 				4B7278BC2B53339D006E1400 /* Constants.swift in Sources */,
-				4B7278B82B531D28006E1400 /* LandingViewController.swift in Sources */,
 				4B7278C02B543937006E1400 /* TambolaGridViewController.swift in Sources */,
 				4B7278862B53170B006E1400 /* SceneDelegate.swift in Sources */,
 			);

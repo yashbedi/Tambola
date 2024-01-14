@@ -28,6 +28,8 @@ final class TambolaViewController: UIViewController {
         button.addTarget(self, action: #selector(gameStartButtonTapped(_:)), for: .touchUpInside)
         button.backgroundColor = .systemPink
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 20
+        button.layer.masksToBounds = true
         return button
     }()
     
@@ -51,11 +53,13 @@ final class TambolaViewController: UIViewController {
     
     private lazy var generateNextTambolaNumerButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Generate next num", for: .normal)
+        button.setTitle("Generate next number", for: .normal)
         button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .title2)
         button.addTarget(self, action: #selector(generateNextTambolaNumber(_:)), for: .touchUpInside)
         button.backgroundColor = .systemBlue
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
         return button
     }()
     
@@ -109,10 +113,8 @@ private extension TambolaViewController {
         NSLayoutConstraint.activate([
             generatedNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             generatedNumberLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            generatedNumberLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             generatedNumberLabel.heightAnchor.constraint(equalToConstant: 250),
             generatedNumberLabel.widthAnchor.constraint(equalToConstant: 250),
-//            generatedNumberLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
         ])
         
         NSLayoutConstraint.activate([
@@ -155,6 +157,7 @@ private extension TambolaViewController {
     @objc
     func gameStartButtonTapped(_ sender: UIButton){
         gameHasStarted()
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
     }
     
     @objc
@@ -165,9 +168,11 @@ private extension TambolaViewController {
             addConstraintsForGameStartSubView()
             presenter.resetGame()
             pinFirstNumber()
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
             return
         }
         generatedNumberLabel.text = "\(presenter.getNextTambolaNumber())"
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
     }
     
     @objc

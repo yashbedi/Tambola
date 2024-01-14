@@ -23,9 +23,6 @@ final class TambolaGridViewController: UIViewController {
     
     private lazy var collectionViewForCalledOutNumbers: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-//        layout.estimatedItemSize = CGSize(width: 32, height: 32)
-//        layout.minimumInteritemSpacing = 0
-//        layout.itemSize = CGSize(width: 32, height: 32)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.isScrollEnabled = false
         collection.translatesAutoresizingMaskIntoConstraints = false
