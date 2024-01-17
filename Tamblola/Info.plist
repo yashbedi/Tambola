@@ -8,6 +8,29 @@
 		<false/>
 		<key>UISceneConfigurations</key>
 		<dict>
+			<key>UIApplicationShortcutItems</key>
+			<array>
+				<dict>
+					<key>UIApplicationShortcutItemIconType</key>
+					<string>UIApplicationShortcutIconTypeSearch</string>
+					<key>UIApplicationShortcutItemSubtitle</key>
+					<string>Search for an item</string>
+					<key>UIApplicationShortcutItemTitle</key>
+					<string>Search</string>
+					<key>UIApplicationShortcutItemType</key>
+					<string>SearchAction</string>
+				</dict>
+				<dict>
+					<key>UIApplicationShortcutItemIconType</key>
+					<string>UIApplicationShortcutIconTypeShare</string>
+					<key>UIApplicationShortcutItemSubtitle</key>
+					<string>Share an item</string>
+					<key>UIApplicationShortcutItemTitle</key>
+					<string>Share</string>
+					<key>UIApplicationShortcutItemType</key>
+					<string>ShareAction</string>
+				</dict>
+			</array>
 			<key>UIWindowSceneSessionRoleApplication</key>
 			<array>
 				<dict>

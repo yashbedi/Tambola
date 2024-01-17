@@ -11,6 +11,8 @@ final class TambolaViewController: UIViewController {
 
     private let presenter: TambolaPresenter
     
+    private var topLabelConstraint: NSLayoutConstraint?
+    
     init(presenter: TambolaPresenter){
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -65,6 +67,7 @@ final class TambolaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        topLabelConstraint == nil ? () : customiseLabel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,6 +91,35 @@ final class TambolaViewController: UIViewController {
         startButton.removeFromSuperview()
         gameStartView.removeFromSuperview()
     }
+    
+    func customiseLabel() {
+        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
+            
+            topLabelConstraint?.isActive = false
+            /// This is Portrait
+            topLabelConstraint = generatedNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 200)
+            topLabelConstraint?.isActive = true
+            
+            generatedNumberLabel.font = UIFont.boldSystemFont(ofSize: 180)
+            generatedNumberLabel.textColor = .white
+            view.layoutIfNeeded()
+        }else{
+            
+            topLabelConstraint?.isActive = false
+            /// This is Landscape
+            topLabelConstraint = generatedNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 50)
+            topLabelConstraint?.isActive = true
+            
+            generatedNumberLabel.font = UIFont.boldSystemFont(ofSize: 100)
+            generatedNumberLabel.textColor = .white
+            view.layoutIfNeeded()
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        
+        topLabelConstraint == nil ? () : customiseLabel()
+    }
 }
 
 private extension TambolaViewController {
@@ -110,8 +142,9 @@ private extension TambolaViewController {
     }
     
     func setConstraints(){
+        topLabelConstraint = generatedNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 200)
+        topLabelConstraint?.isActive = true
         NSLayoutConstraint.activate([
-            generatedNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
             generatedNumberLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             generatedNumberLabel.heightAnchor.constraint(equalToConstant: 250),
             generatedNumberLabel.widthAnchor.constraint(equalToConstant: 250),
