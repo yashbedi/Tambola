@@ -57,8 +57,8 @@ private extension TambolaGridViewController {
     func setConstraints(){
         NSLayoutConstraint.activate([
             collectionViewForCalledOutNumbers.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            collectionViewForCalledOutNumbers.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            collectionViewForCalledOutNumbers.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            collectionViewForCalledOutNumbers.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            collectionViewForCalledOutNumbers.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
             collectionViewForCalledOutNumbers.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
         ])
     }
